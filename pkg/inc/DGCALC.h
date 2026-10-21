@@ -30,6 +30,9 @@
 
 namespace DGCALC {
 
+// logsize
+using logsize_t = int_fast8_t;
+
 // size type
 using size_t = std::size_t;
 
