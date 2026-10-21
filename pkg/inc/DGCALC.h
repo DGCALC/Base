@@ -207,6 +207,11 @@ static constexpr uint64_t get_sign_bit_ULL(uint64_t N) {
 // string helper method: "simple" substitution
 // Definition: replace all occurences of [pattern] with [suband] in [subee].
 // ...just a simple tool to do a simple thing without any 1970's contraptions.
-void ssub(std::string & subee, const std::string & pattern, const std::string & suband);
+inline void ssub(std::string & subee, const std::string & pattern, const std::string & suband) {
+   size_t pos = 0;
+   while ((pos = subee.find(pattern, pos)) != std::string::npos) {
+      subee.replace(pos, pattern.length(), suband);
+   }
+}
 
 }
